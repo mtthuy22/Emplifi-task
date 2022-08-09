@@ -1,0 +1,269 @@
+/*LAYOUT AND VARIABLES*/
+
+:root {
+    --main-bg-color: #f3f3f5;
+    --block-bg-color: #e4e5e6;
+    --main-txt-color: #2f3744;
+    --block-txt-color: #717578;
+    --img-bg-color: #546ecce6;
+    --bullet-color: rgba(0, 56, 229, 0.1);
+    --bullet-color-2: rgba(0, 56, 229, 0.9);
+    --primary-btn-color: #25a066;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: var(--main-bg-color);
+    overflow-x: hidden;
+
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 980px;
+    height: 980px;
+    display: grid;
+    grid-template-rows: 540px auto;
+    gap: 96px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: var(--main-bg-color);
+    padding: 24px 24px 158px 24px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+h1,
+h4,
+h5 {
+    margin: 0 0 24px 0;
+    color: var(--main-txt-color);
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+h5 {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h5 span {
+    font-weight: 400;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+/* LAYOUT DETAILS STYLES*/
+
+.top__container {
+    width: 100%;
+    background-color: var(--block-bg-color);
+    border-radius: 18px 18px 0 18px;
+    padding: 0 0 0 36px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.container {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+}
+
+.container__desc {
+    margin-bottom: 24px;
+    text-align: right;
+}
+
+.container__btn {
+    display: flex;
+    font-size: 13px;
+    align-items: baseline;
+    margin-top: 24px;
+    gap: 36px;
+}
+
+.container__img {
+    background: var(--img-bg-color);
+    background-size: cover;
+    width: 476px;
+    height: 600px;
+    opacity: 0.1;
+    border-radius: 0px 18px 0px 0px;
+    margin-left: 60px;
+}
+
+.list__container {
+    padding: 0 36px;
+}
+
+.list__item {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+}
+
+.list__desc {
+    color: var(--block-txt-color);
+    margin: 0;
+    font-size: 13px;
+    font-family: 400;
+}
+
+/*LAYOUT ELEMENTS STYLES*/
+
+.primary-btn {
+    display: block;
+    height: 48px;
+    color: white;
+    background-color: var(--primary-btn-color);
+    text-decoration: none;
+    padding: 15px 24px;
+    border-radius: 6px;
+}
+
+.link-btn {
+    color: #0038e5;
+}
+
+.list__bullet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background-color: var(--bullet-color);
+}
+
+.list__bullet--inner {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--bullet-color-2);
+}
+
+/*RESPONSIVITY*/
+
+@media (min-width: 1220px) {
+
+    body {
+        max-width: 1220px;
+        font-weight: 500;
+    }
+
+    .top__container {
+        justify-content: space-between;
+    }
+
+
+    .container {
+        width: 540px;
+    }
+
+    .container__desc {
+        margin-bottom: 24px;
+        text-align: left;
+    }
+
+    .container__img {
+        width: 476px;
+    }
+
+    .list__item {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1300px) {
+    body {
+        max-width: 1300px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    h1 {
+        font-size: 46px;
+        font-weight: 700;
+    }
+
+    h4 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    h5 {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .container__img {
+        width: 616px;
+        border-radius: 0px 18px 0px 0px;
+    }
+}
+
+@media (min-width: 1500px){
+    body{
+        max-width: 1500px;
+        padding: 36px 36px 158px 36px;
+    }
+
+    .top__container{
+        padding: 0 0 0 72px;
+    }
+
+    .container{
+        width: 600px;
+        margin-right: 60px;
+    }
+
+    .list__item{
+        width: 360px;
+    }
+}
+
+@media (min-width: 1860px){
+    body{
+        max-width: 1788px;
+    }
+
+    .top__container{
+        padding: 0 0 0 240px;
+    }
+
+    .container__img{
+        width: 828px;
+    }
+}
+
+@media (min-width: 2500px){
+    body{
+        margin: 0 auto;
+    }
+}
